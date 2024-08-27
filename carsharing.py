@@ -16,7 +16,7 @@ db = [
 ]
 
 @app.get("/api/cars")
-def get_cars(size: str, doors: int):
+def get_cars(size: str|None = None, doors: int|None = None) -> list:
     result = db
     if size:
         result =  [car for car in result if car['size'] == size]
