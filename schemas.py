@@ -1,7 +1,9 @@
-from sqlmodel import SQLModel, Field
 import json
 
-class TripInput(SQLModel):
+from pydantic import BaseModel
+
+
+class TripInput(BaseModel):
     start: int
     end: int
     description: str
@@ -11,7 +13,7 @@ class TripOutput(TripInput):
     id: int
 
 
-class CarInput(SQLModel):
+class CarInput(BaseModel):
     size: str
     fuel: str | None = "electric"
     doors: int
@@ -27,9 +29,6 @@ class CarInput(SQLModel):
             }
         }
 
-
-class Car(CarInput, table=True):
-    id: int | None = Field(primary_key=True, default=None)
 
 class CarOutput(CarInput):
     id: int

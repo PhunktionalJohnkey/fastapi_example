@@ -1,21 +1,11 @@
 import uvicorn
 from fastapi import FastAPI, HTTPException
-from sqlmodel import create_engine, SQLModel
 
 from schemas import load_db, save_db, CarInput, CarOutput, TripOutput, TripInput
 
 app = FastAPI(title="Car Sharing")
 db = load_db()
 
-engine = create_engine(
-    "sqlite://carsharing.db",
-    connect_args={"check_same_thread": False}, # Needed for SQLite
-    echo=True # Log generated SQL
-)
-
-@app.on_event("startup")
-def on_startup():
-    SQLModel.metadata.create_all(engine)
 
 @app.get("/api/cars")
 def get_cars(size: str | None = None, doors: int | None = None) -> list:
@@ -28,7 +18,7 @@ def get_cars(size: str | None = None, doors: int | None = None) -> list:
 
 
 @app.get("/api/cars/{id}")
-def car_by_id(id: int) -> list:
+def car_by_id(id: int) -> dict:
     result = [car for car in db if car.id == id]
     if result:
         return result[0]

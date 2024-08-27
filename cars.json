@@ -4,7 +4,6 @@
         "fuel": "gasoline",
         "doors": 3,
         "transmission": "auto",
-        "id": 1,
         "trips": [
             {
                 "start": 0,
@@ -24,14 +23,14 @@
                 "description": "Weekend beach trip",
                 "id": 3
             }
-        ]
+        ],
+        "id": 1
     },
     {
         "size": "s",
         "fuel": "electric",
         "doors": 3,
         "transmission": "auto",
-        "id": 2,
         "trips": [
             {
                 "start": 0,
@@ -45,22 +44,22 @@
                 "description": "Meeting Customer in Utrecht",
                 "id": 5
             }
-        ]
+        ],
+        "id": 2
     },
     {
         "size": "s",
         "fuel": "gasoline",
         "doors": 5,
         "transmission": "manual",
-        "id": 3,
-        "trips": []
+        "trips": [],
+        "id": 3
     },
     {
         "size": "m",
         "fuel": "electric",
         "doors": 3,
         "transmission": "auto",
-        "id": 4,
         "trips": [
             {
                 "start": 0,
@@ -68,38 +67,38 @@
                 "description": "Visiting mom",
                 "id": 6
             }
-        ]
+        ],
+        "id": 4
     },
     {
         "size": "m",
         "fuel": "gasoline",
         "doors": 5,
         "transmission": "manual",
-        "id": 6,
-        "trips": []
+        "trips": [],
+        "id": 6
     },
     {
         "size": "l",
         "fuel": "diesel",
         "doors": 5,
         "transmission": "manual",
-        "id": 7,
-        "trips": []
+        "trips": [],
+        "id": 7
     },
     {
         "size": "l",
         "fuel": "electric",
         "doors": 5,
         "transmission": "auto",
-        "id": 8,
-        "trips": []
+        "trips": [],
+        "id": 8
     },
     {
         "size": "l",
         "fuel": "hybrid",
         "doors": 5,
         "transmission": "auto",
-        "id": 9,
         "trips": [
             {
                 "start": 0,
@@ -107,30 +106,15 @@
                 "description": "Forest walk",
                 "id": 7
             }
-        ]
+        ],
+        "id": 9
     },
     {
         "size": "xl",
         "fuel": "electric",
         "doors": 5,
         "transmission": "auto",
-        "id": 10,
-        "trips": []
-    },
-    {
-        "size": "medium",
-        "fuel": "electric",
-        "doors": 6,
-        "transmission": "manual",
-        "id": 10,
-        "trips": []
-    },
-    {
-        "size": "small",
-        "fuel": "electric",
-        "doors": 2,
-        "transmission": "auto",
-        "id": 11,
-        "trips": []
+        "trips": [],
+        "id": 10
     }
 ]
