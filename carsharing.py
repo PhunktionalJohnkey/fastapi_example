@@ -16,15 +16,6 @@ db = [
 ]
 
 @app.get("/api/cars")
-def get_cars():
-    return db
+def get_cars(size):
+    return [car for car in db if car['size'] == size]
 
-@app.get("/")
-def welcome(name):
-    """Return a friendly welcome message."""
-    return {'message': f"Welcome, {name}, to the Car Sharing service!"}
-
-@app.get("/date")
-def welcome():
-    """Return the date."""
-    return {'date': datetime.now()}
