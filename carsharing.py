@@ -16,6 +16,8 @@ db = [
 ]
 
 @app.get("/api/cars")
-def get_cars(size):
-    return [car for car in db if car['size'] == size]
-
+def get_cars(size=None):
+    if size:
+        return [car for car in db if car['size'] == size]
+    else:
+        return db
