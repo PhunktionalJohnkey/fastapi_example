@@ -23,4 +23,10 @@ def get_cars(size: str|None = None, doors: int|None = None) -> list:
     if doors:
         result =  [car for car in result if car['doors'] >= doors]
     return result
-    
+
+
+@app.get("/api/cars/{id}")
+def car_by_id(id):
+    result = [car for car in db if car['id'] == id]
+    print(f"in call_by_id, id = {id}")
+    return result[0]
